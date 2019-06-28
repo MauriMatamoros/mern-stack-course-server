@@ -5,14 +5,13 @@
   "main": "index.js",
   "engines": {
     "node": "10.16.0",
-    "yarn": "1.16.0",
     "npm": "6.9.0"
   },
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "npm start --prefix client --scripts-prepend-node-path",
-    "dev": "concurrently \"yarn server\" \"yarn client\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm build --prefix client"
   },
   "keywords": [],
